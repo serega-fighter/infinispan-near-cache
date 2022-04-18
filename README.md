@@ -1,8 +1,9 @@
 # Run infinispan server
 
 ```bash
-docker run -p 11222:11222 -e USER="admin" -e PASS="password" infinispan/server:12.1.7.Final
+docker run -p 11222:11222 --name "inf" -v "./vm:/tmp/vm:rw" -e USER="admin" -e PASS="password" infinispan/server:12.1.7.Final
 ```
+
 (Please note that try to run infinispan server version >13.x.x *might not* be compibled with this example.)
 
 # Build first
